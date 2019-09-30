@@ -61,5 +61,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/ic_launcher_foreground" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="252dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="43dp"
+        android:onClick="chiamoclick1"
+        android:text="Non sei ancora registrato?\nRegistrati ora!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
