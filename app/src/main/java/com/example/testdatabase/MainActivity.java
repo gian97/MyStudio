@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setTitle("Registrazione");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         db = new DatabaseHelper(this);
         e1 = (EditText) findViewById(R.id.email);
