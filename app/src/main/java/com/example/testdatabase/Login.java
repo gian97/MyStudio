@@ -36,4 +36,9 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
+    public void chiamoclick1(View v) {
+        Intent ac = new Intent(this, MainActivity.class);
+        startActivity(ac);
+    }
 }
