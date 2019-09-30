@@ -57,10 +57,11 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                     else
-                    Toast.makeText(getApplicationContext(), "Password do not match", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Password do not match", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
     }
 }
+
