@@ -9,7 +9,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#E9FF0000"
+        android:background="@drawable/side_nav_bar"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <TextView
@@ -26,7 +26,8 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FF0000" />
+            android:background="@drawable/side_nav_bar"
+            app:tabIndicatorColor="@color/colorPrimary" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
