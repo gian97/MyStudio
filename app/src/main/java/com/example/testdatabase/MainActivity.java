@@ -17,21 +17,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setTitle("Registrazione");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         db = new DatabaseHelper(this);
         e1 = (EditText) findViewById(R.id.email);
         e2 = (EditText) findViewById(R.id.pass);
         e3 = (EditText) findViewById(R.id.conferma);
         b1 = (Button) findViewById(R.id.register);
-        b2 = (Button) findViewById(R.id.log);
-
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Login.class);
-                startActivity(i);
-            }
-        });
 
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
                             Boolean insert = db.insert(s1, s2);
                             if(insert==true){
                                 Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
+                                Intent i = new Intent(MainActivity.this, Home.class);
+                                startActivity(i);
                             }
                         }
                         else{

@@ -22,11 +22,15 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class Home extends AppCompatActivity{
 
     private AppBarConfiguration mAppBarConfiguration;
-
+    //EditText e1;
+    //Button b1;
+    //DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,27 @@ public class Home extends AppCompatActivity{
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
+
+        //db = new DatabaseHelper(this);
+        //e1 = (EditText) findViewById(R.id.editText);
+        //b1 = (Button)findViewById(R.id.prenota);
+
+        /*b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = e1.getText().toString();
+
+                Boolean chkpt  = db.chkemailpt(email);
+                if(chkpt == true){
+                    Toast.makeText(getApplicationContext(), "Prenotazione effettuata", Toast.LENGTH_SHORT).show();
+                    Boolean insert = db.pren_pt(email);
+                    }
+                else
+                    Toast.makeText(getApplicationContext(), "Impossibile prenotare", Toast.LENGTH_SHORT).show();
+            }
+        });*/
 
     }
 
