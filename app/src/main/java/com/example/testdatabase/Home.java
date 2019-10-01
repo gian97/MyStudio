@@ -97,7 +97,7 @@ public class Home extends AppCompatActivity{
     }
 
     public void chiamoclick(View v) {
-        Intent ac = new Intent(this, Biblioteca.class);
+        Intent ac = new Intent(this, Prenotazione.class);
         startActivity(ac);
     }
 }
