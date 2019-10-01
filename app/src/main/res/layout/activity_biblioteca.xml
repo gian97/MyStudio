@@ -45,11 +45,4 @@
         app:maxImageSize="@android:dimen/app_icon_size"
         app:srcCompat="@android:drawable/ic_menu_info_details" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="411dp"
-        android:layout_height="564dp"
-        app:layout_anchor="@+id/view_pager"
-        app:layout_anchorGravity="center"
-        app:srcCompat="@mipmap/piano_terra" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
