@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 String s2 = e2.getText().toString();
                 String s3 = e3.getText().toString();
                 if(s1.equals("")|| s2.equals("") || s3.equals("")){
-                    Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Dati non inseriti", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     if(s2.equals(s3)){
@@ -42,17 +42,17 @@ public class MainActivity extends AppCompatActivity {
                         if(chkemail == true){
                             Boolean insert = db.insert(s1, s2);
                             if(insert==true){
-                                Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Registrazione avvenuta", Toast.LENGTH_SHORT).show();
                                 Intent i = new Intent(MainActivity.this, Home.class);
                                 startActivity(i);
                             }
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "Email Already exists", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Email già esistente", Toast.LENGTH_SHORT).show();
                         }
                     }
                     else
-                        Toast.makeText(getApplicationContext(), "Password do not match", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "La password non corrisponde", Toast.LENGTH_SHORT).show();
                 }
             }
         });

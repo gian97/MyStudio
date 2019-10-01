@@ -28,11 +28,11 @@ public class Login extends AppCompatActivity {
                 String password = e2.getText().toString();
                 Boolean Chkemailpass = db.emailpassword(email, password);
                 if(Chkemailpass == true){
-                    Toast.makeText(getApplicationContext(), "Successfully Login", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Login avvenuto", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(Login.this, Home.class);
                     startActivity(i);}
                 else
-                    Toast.makeText(getApplicationContext(), "Wrong email or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Email o password errati", Toast.LENGTH_SHORT).show();
             }
         });
     }
