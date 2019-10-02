@@ -33,32 +33,31 @@ public class MainActivity extends AppCompatActivity {
                 String s1 = e1.getText().toString();
                 String s2 = e2.getText().toString();
                 String s3 = e3.getText().toString();
-                if(s1.equals("")|| s2.equals("") || s3.equals("")){
+                if (s1.equals("") || s2.equals("") || s3.equals("")) {
                     Toast.makeText(getApplicationContext(), "Dati non inseriti", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    if(s2.equals(s3)){
+                    if (s2.equals(s3)) {
                         Boolean chkemail = db.chkemail(s1);
-                        if(chkemail == true){
-                             Boolean insert = db.insertdata(s1, s2);
-                             if(insert==true){
-                                    Toast.makeText(getApplicationContext(), "Registrazione avvenuta", Toast.LENGTH_SHORT).show();
-                                    Intent i = new Intent(MainActivity.this, Prenotazione.class);
-                                    startActivity(i);
-                                }
+                        if (chkemail == true) {
+                            Boolean insert = db.insert(s1, s2);
+                            if (insert == true) {
+                                Toast.makeText(getApplicationContext(), "Registrazione avvenuta", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(MainActivity.this, Login.class);
+                                startActivity(intent);
                             }
-                            else{
-                                Toast.makeText(getApplicationContext(), "Email già registrata", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            Toast.makeText(getApplicationContext(), "Email già registrata", Toast.LENGTH_SHORT).show();
 
-                            }
                         }
-                        else{
-                            Toast.makeText(getApplicationContext(), "Password non combacianti", Toast.LENGTH_SHORT).show();
-                        }
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), "Password non combacianti", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
-
     }
 }
 
