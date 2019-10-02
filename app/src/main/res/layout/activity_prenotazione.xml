@@ -32,4 +32,25 @@
 Ti basta un semplice click.\nFacile, veloce e a portata di mano."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginBottom="95dp"
+        android:text="Sei loggato come:"
+        android:textColor="#0E0000"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/param"
+        android:layout_width="129dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="95dp"
+        android:textColor="#050000"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
