@@ -47,12 +47,6 @@ public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuI
                 Intent i3 = new Intent(Prenotazione.this, AulaStudio.class);
                 startActivity(i3);
                 return true;
-            case R.id.av:
-                Toast.makeText(this, "Scelto aula vetri", Toast.LENGTH_SHORT).show();
-                Intent i4 = new Intent(Prenotazione.this, AulaVetri.class);
-                startActivity(i4);
-                return true;
-
                 default: return false;
         }
     }
