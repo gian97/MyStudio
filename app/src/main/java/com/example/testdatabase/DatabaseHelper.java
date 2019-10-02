@@ -40,6 +40,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         boolean trovato = false;
         int m = sotto.length();
         int n = email.length();
+        if(n != 26)
+            return false;
         int j = 6;
         for(int i = 0; i<n; i++){
             if(email.charAt(i) == sotto.charAt(j)){
