@@ -8,11 +8,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="369dp"
-        android:layout_height="338dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/auletta" />
+        android:layout_width="308dp"
+        android:layout_height="309dp"
+        app:srcCompat="@mipmap/auletta"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="-14dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
