@@ -34,6 +34,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return true;
     }
 
+    //checking if it si an email (@)
+    public boolean chiocc(String email){
+        int n = email.length();
+        for(int i = 0; i<n; i++){
+            if(email.charAt(i) == '@')
+                return true;
+        }
+        return false;
+    }
+
     //checking if email exists
     public Boolean chkemail(String email){
         SQLiteDatabase db = this.getWritableDatabase();
