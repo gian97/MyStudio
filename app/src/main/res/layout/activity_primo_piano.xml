@@ -10,7 +10,9 @@
         android:id="@+id/imageView4"
         android:layout_width="204dp"
         android:layout_height="386dp"
-        app:srcCompat="@mipmap/primo_piano"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/primo_piano" />
 </androidx.constraintlayout.widget.ConstraintLayout>
