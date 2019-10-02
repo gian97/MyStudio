@@ -48,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }
                             else{
-                                Toast.makeText(getApplicationContext(), "Non è una email", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Email già registrata", Toast.LENGTH_SHORT).show();
 
                             }
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "Email già esistente", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Password non combacianti", Toast.LENGTH_SHORT).show();
                         }
                 }
             }
