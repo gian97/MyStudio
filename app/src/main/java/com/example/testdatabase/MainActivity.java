@@ -40,19 +40,21 @@ public class MainActivity extends AppCompatActivity {
                     if(s2.equals(s3)){
                         Boolean chkemail = db.chkemail(s1);
                         if(chkemail == true){
-                            Boolean insert = db.insertdata(s1, s2);
-                            if(insert==true){
-                                Toast.makeText(getApplicationContext(), "Registrazione avvenuta", Toast.LENGTH_SHORT).show();
-                                Intent i = new Intent(MainActivity.this, Prenotazione.class);
-                                startActivity(i);
+                             Boolean insert = db.insertdata(s1, s2);
+                             if(insert==true){
+                                    Toast.makeText(getApplicationContext(), "Registrazione avvenuta", Toast.LENGTH_SHORT).show();
+                                    Intent i = new Intent(MainActivity.this, Prenotazione.class);
+                                    startActivity(i);
+                                }
+                            }
+                            else{
+                                Toast.makeText(getApplicationContext(), "Non è una email", Toast.LENGTH_SHORT).show();
+
                             }
                         }
                         else{
                             Toast.makeText(getApplicationContext(), "Email già esistente", Toast.LENGTH_SHORT).show();
                         }
-                    }
-                    else
-                        Toast.makeText(getApplicationContext(), "La password non corrisponde", Toast.LENGTH_SHORT).show();
                 }
             }
         });

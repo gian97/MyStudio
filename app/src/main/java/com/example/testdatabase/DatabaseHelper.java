@@ -16,8 +16,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table user(email text primary key, password text)");
-        //db.execSQL("Create table prenotazioni_pp(email text)");
-        //db.execSQL("Create table prenotazioni_pt(email text)");
     }
 
     @Override
@@ -36,25 +34,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return true;
     }
 
-    //prenotazione piano terra
-   /* public boolean pren_pt(String email){
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("email", email );
-        long ins = db.insert("prenotazioni_pt", null, contentValues);
-        if(ins == -1) return false;
-        else return true;
-    }
-
-    //prenotazione primo piano
-    public boolean pren_pp(String email){
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("email", email );
-        long ins = db.insert("prenotazioni_pp", null, contentValues);
-        if(ins == -1) return false;
-        else return true;
-    } */
     //checking if email exists
     public Boolean chkemail(String email){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -63,22 +42,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return true;
     }
 
-    //se ho già prenotato un posto piano terra
-    /*public Boolean chkemailpt(String email){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from prenotazioni_pt where email=?", new String[]{email});
-        if(cursor.getCount()>0) return false;
-        else return true;
-    }
-
-    //se ho già prenotato un posto primo piano
-    public Boolean chkemailpp(String email){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from prenotazioni_pp where email=?", new String[]{email});
-        if(cursor.getCount()>0) return false;
-        else return true;
-    }*/
-    //checking the email and password
+   //checking if the user is already done
     public Boolean emailpassword(String email, String password){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from user where email=? and password =?", new String[]{email, password});
