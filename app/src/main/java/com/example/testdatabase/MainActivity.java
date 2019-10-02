@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                             Boolean insert = db.insertdata(s1, s2);
                             if(insert==true){
                                 Toast.makeText(getApplicationContext(), "Registrazione avvenuta", Toast.LENGTH_SHORT).show();
-                                Intent i = new Intent(MainActivity.this, Home.class);
+                                Intent i = new Intent(MainActivity.this, Prenotazione.class);
                                 startActivity(i);
                             }
                         }

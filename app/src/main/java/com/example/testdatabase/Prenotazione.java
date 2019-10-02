@@ -32,6 +32,12 @@ public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuI
             case R.id.pt:
                 Toast.makeText(this, "Scelto piano terra", Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.as:
+                Toast.makeText(this, "Scelto aula studio", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.av:
+                Toast.makeText(this, "Scelto aula vetri", Toast.LENGTH_SHORT).show();
+                return true;
 
                 default: return false;
         }

@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Prenotazione"></activity>
+        <activity android:name=".AulaVetri"></activity>
+        <activity android:name=".AulaStudio" />
+        <activity android:name=".PrimoPiano" />
+        <activity android:name=".PianoTerra" />
+        <activity android:name=".Prenotazione" />
         <activity
             android:name=".Biblioteca"
             android:label="@string/title_activity_biblioteca"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Home"
-            android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"

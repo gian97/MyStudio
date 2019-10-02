@@ -5,4 +5,9 @@
         android:title="Piano terra"/>
     <item android:id="@+id/pp"
         android:title="Primo piano"/>
+    <item android:id="@+id/as"
+        android:title="Aula Studio"/>
+    <item android:id="@+id/av"
+        android:title="Aula Vetri"/>
+
 </menu>

@@ -10,10 +10,26 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="190dp"
-        android:layout_marginTop="91dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="372dp"
+        android:onClick="showPopup"
         android:text="Prenota"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="showPopup"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="342dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="#8BC34A"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Benvenuto in MyStudio!\nQuesta è l'app che ti permette di prenotare il tuo posto alla biblioteca Ingegneria Ferrari.\n
+Ti basta un semplice click.\nFacile, veloce e a portata di mano."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
