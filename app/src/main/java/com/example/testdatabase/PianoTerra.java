@@ -11,6 +11,5 @@ public class PianoTerra extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_piano_terra);
         getSupportActionBar().setTitle("Piano Terra");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

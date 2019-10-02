@@ -19,6 +19,7 @@ public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuI
         final TextView mail = (TextView) findViewById(R.id.param);
         Bundle bundle = this.getIntent().getExtras();
         mail.setText(bundle.getString("email"));
+        getSupportActionBar().setTitle("Home");
 
     }
 
@@ -47,8 +48,7 @@ public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuI
                 Intent i3 = new Intent(Prenotazione.this, AulaStudio.class);
                 startActivity(i3);
                 return true;
-                default: return false;
+            default: return false;
         }
     }
 }
-

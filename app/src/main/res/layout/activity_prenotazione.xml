@@ -54,3 +54,4 @@ Ti basta un semplice click.\nFacile, veloce e a portata di mano."
         app:layout_constraintStart_toEndOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

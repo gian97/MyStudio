@@ -11,6 +11,6 @@ public class PrimoPiano extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_primo_piano);
         getSupportActionBar().setTitle("Primo Piano");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 }

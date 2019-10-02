@@ -11,6 +11,6 @@ public class AulaStudio extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aula_studio);
         getSupportActionBar().setTitle("Aula Studio");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 }
