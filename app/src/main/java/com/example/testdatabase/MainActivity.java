@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "Non è una email", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Non è una email di dipartimento", Toast.LENGTH_SHORT).show();
                         }
                     }
                     else {

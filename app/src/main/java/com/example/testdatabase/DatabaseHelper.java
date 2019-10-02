@@ -36,12 +36,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //checking if it si an email (@)
     public boolean chiocc(String email){
+        String sotto = "******@studenti.unimore.it";
+        boolean trovato = false;
+        int m = sotto.length();
         int n = email.length();
+        int j = 6;
         for(int i = 0; i<n; i++){
-            if(email.charAt(i) == '@')
-                return true;
+            if(email.charAt(i) == sotto.charAt(j)){
+                j++;
+            }
+            else j=6;
         }
-        return false;
+        if(j==m)
+            trovato=true;
+        return trovato;
     }
 
     //checking if email exists
