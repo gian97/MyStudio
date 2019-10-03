@@ -23,6 +23,8 @@ public class PrimoPiano extends AppCompatActivity {
         final TextView mail = (TextView) findViewById(R.id.userpp);
         Bundle bundlepp = this.getIntent().getExtras();
         mail.setText(bundlepp.getString("email"));
+
+
         e2 = (EditText) findViewById(R.id.pianopp);
         e3 = (EditText) findViewById(R.id.tavolopp);
 

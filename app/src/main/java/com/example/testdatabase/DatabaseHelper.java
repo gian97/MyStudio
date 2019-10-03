@@ -25,7 +25,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //prenotazioni
-    public boolean prenote(String email, String aula, int numero){
+    public boolean prenote(String email, String aula, String numero){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("email", email);
@@ -64,6 +64,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if(j==m)
             trovato=true;
         return trovato;
+    }
+
+    public Boolean chkprem(String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select * from prenotazioni where email=?", new String[]{email});
+        if(cursor.getCount()>0) return false;
+        else return true;
     }
 
     //checking if email exists
