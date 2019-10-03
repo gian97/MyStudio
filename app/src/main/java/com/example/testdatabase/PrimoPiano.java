@@ -19,6 +19,10 @@ public class PrimoPiano extends AppCompatActivity {
         setContentView(R.layout.activity_primo_piano);
         getSupportActionBar().setTitle("Primo Piano");
 
+        e1 = (EditText) findViewById(R.id.userpp);
+        e2 = (EditText) findViewById(R.id.pianopp);
+        e3 = (EditText) findViewById(R.id.tavolopp);
+
         b1 = (Button) findViewById(R.id.ppp);
 
         b1.setOnClickListener(new View.OnClickListener() {

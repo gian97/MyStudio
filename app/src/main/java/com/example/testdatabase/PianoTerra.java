@@ -19,6 +19,10 @@ public class PianoTerra extends AppCompatActivity {
         setContentView(R.layout.activity_piano_terra);
         getSupportActionBar().setTitle("Piano Terra");
 
+        e1 = (EditText) findViewById(R.id.userpt);
+        e2 = (EditText) findViewById(R.id.pianopt);
+        e3 = (EditText) findViewById(R.id.tavolopt);
+
         b1 = (Button) findViewById(R.id.ppt);
 
         b1.setOnClickListener(new View.OnClickListener() {

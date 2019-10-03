@@ -20,6 +20,10 @@ public class AulaStudio extends AppCompatActivity {
         setContentView(R.layout.activity_aula_studio);
         getSupportActionBar().setTitle("Aula Studio");
 
+        e1 = (EditText) findViewById(R.id.useras);
+        e2 = (EditText) findViewById(R.id.pianoas);
+        e3 = (EditText) findViewById(R.id.tavoloas);
+
         b1 = (Button) findViewById(R.id.pas);
 
         b1.setOnClickListener(new View.OnClickListener() {

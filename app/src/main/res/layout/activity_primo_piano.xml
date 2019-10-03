@@ -17,7 +17,7 @@
         app:srcCompat="@mipmap/primo_piano" />
 
     <EditText
-        android:id="@+id/textView3pp"
+        android:id="@+id/userpp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="900dp"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textView4pp"
+        android:id="@+id/pianopp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -38,28 +38,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3pp" />
+        app:layout_constraintTop_toBottomOf="@+id/userpp" />
 
     <EditText
-        android:id="@+id/textView5pp"
+        android:id="@+id/tavolopp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="Numero Tavolo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4pp" />
+        app:layout_constraintTop_toBottomOf="@+id/pianopp" />
 
     <Button
         android:id="@+id/ppp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="37dp"
         android:text="prenota"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4pp" />
+        app:layout_constraintTop_toBottomOf="@+id/tavolopp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
