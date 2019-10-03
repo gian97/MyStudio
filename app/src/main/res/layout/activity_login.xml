@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:foregroundTint="@android:color/background_light"
-    tools:context=".Login"
-    android:background="@drawable/side_nav_bar">
+    tools:context=".Login">
 
     <EditText
         android:id="@+id/editText"
@@ -17,7 +16,7 @@
         android:layout_marginEnd="99dp"
         android:ems="10"
         android:hint="Email"
-
+        android:background="#8BC34A"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -34,6 +33,7 @@
         android:layout_marginBottom="31dp"
         android:ems="10"
         android:hint="Password"
+        android:background="#8BC34A"
         android:inputType="textPersonName"
         android:password="true"
         app:layout_constraintBottom_toTopOf="@+id/button"
@@ -53,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="#FFFFFF"
+        android:backgroundTint="#8BC34A"
         />
 
     <ImageView

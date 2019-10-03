@@ -30,7 +30,7 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:text="Benvenuto in MyStudio!\nQuesta è l'app che ti permette di prenotare il tuo posto alla biblioteca Ingegneria Ferrari.\n
+        android:text="MyStudio!\nQuesta è l'app che ti permette di prenotare il tuo posto alla biblioteca Ingegneria Ferrari.\n
 Ti basta un semplice click.\nFacile, veloce e a portata di mano."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,20 +38,23 @@ Ti basta un semplice click.\nFacile, veloce e a portata di mano."
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="51dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginBottom="95dp"
-        android:text="Sei loggato come:"
+        android:text="Benvenuto,  "
+        android:backgroundTint="#8BC34A"
         android:textColor="#0E0000"
+        android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/param"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="95dp"
         android:textColor="#050000"
+        android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintStart_toEndOf="@+id/textView" />
 
