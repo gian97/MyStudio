@@ -21,6 +21,7 @@ public class PianoTerra extends AppCompatActivity {
         setContentView(R.layout.activity_piano_terra);
         getSupportActionBar().setTitle("Piano Terra");
 
+
         final TextView mail = (TextView) findViewById(R.id.userpt);
         Bundle bundlept = this.getIntent().getExtras();
         mail.setText(bundlept.getString("email"));
