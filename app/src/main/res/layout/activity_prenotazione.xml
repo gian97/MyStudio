@@ -7,6 +7,19 @@
     tools:context=".Prenotazione">
 
     <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="564dp"
+        android:backgroundTint="#8BC34A"
+        android:onClick="showPrenotazione"
+        android:text="Visualizza le tue prenotazioni attive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/button2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

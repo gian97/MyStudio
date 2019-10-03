@@ -20,7 +20,6 @@ public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuI
         Bundle bundle = this.getIntent().getExtras();
         mail.setText(bundle.getString("email"));
         getSupportActionBar().setTitle("Home");
-
     }
 
     public void showPopup(View v) {
@@ -28,6 +27,11 @@ public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuI
         popup.setOnMenuItemClickListener(this);
         popup.inflate(R.menu.popup_menu);
         popup.show();
+    }
+
+    public void showPrenotazione(View v){
+        Intent ac = new Intent(this, Cronologia.class);
+        startActivity(ac);
     }
 
     @Override

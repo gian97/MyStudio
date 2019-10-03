@@ -16,6 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table user(email text primary key, password text)");
+        db.execSQL("Create table prenotazioni(email text primary key, aula text, numtavolo integer)");
     }
 
     @Override
@@ -23,6 +24,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("drop table if exists user");
     }
 
+    //prenotazioni
+    public boolean prenote(String email, String aula, int numero){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("email", email);
+        contentValues.put("aula", aula);
+        contentValues.put("numtavolo", numero);
+        long ins = db.insert("prenotazioni", null, contentValues);
+        if(ins == -1) return false;
+        else return true;
+    }
     //inserting in database
     public boolean insert(String email, String password){
         SQLiteDatabase db = this.getWritableDatabase();
