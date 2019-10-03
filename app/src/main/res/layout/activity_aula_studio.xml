@@ -16,7 +16,7 @@
         app:srcCompat="@mipmap/auletta" />
 
     <EditText
-        android:id="@+id/textView3"
+        android:id="@+id/useras"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="131dp"
@@ -27,19 +27,19 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/textView4"
+        android:id="@+id/pianoas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="Piano"
         android:text="Aula Studio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/useras" />
 
     <EditText
-        android:id="@+id/textView5"
+        android:id="@+id/tavoloas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -47,17 +47,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/pianoas" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/pas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginBottom="56dp"
-        android:text="Prenota"
+        android:layout_marginStart="161dp"
+        android:layout_marginBottom="46dp"
+        android:text="prenota"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
