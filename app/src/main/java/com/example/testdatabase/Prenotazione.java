@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
+    String s1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,10 @@ public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuI
         Bundle bundle = this.getIntent().getExtras();
         mail.setText(bundle.getString("email"));
         getSupportActionBar().setTitle("Home");
+
+        final TextView nome = (TextView) findViewById(R.id.textView3);
+        s1 = mail.getText().toString();
+        //nome.setText(s1);
     }
 
     public void showPopup(View v) {
@@ -38,16 +43,21 @@ public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuI
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.pp:
+                Bundle bundlepp = new Bundle();
                 Toast.makeText(this, "Scelto primo piano", Toast.LENGTH_SHORT).show();
                 Intent i1 = new Intent(Prenotazione.this, PrimoPiano.class);
                 startActivity(i1);
                 return true;
             case R.id.pt:
+                Bundle bundlept = new Bundle();
+                bundlept.putString("email", s1);
                 Toast.makeText(this, "Scelto piano terra", Toast.LENGTH_SHORT).show();
                 Intent i2 = new Intent(Prenotazione.this, PianoTerra.class);
+                i2.putExtras(bundlept);
                 startActivity(i2);
                 return true;
             case R.id.as:
+                Bundle bundleas = new Bundle();
                 Toast.makeText(this, "Scelto aula studio", Toast.LENGTH_SHORT).show();
                 Intent i3 = new Intent(Prenotazione.this, AulaStudio.class);
                 startActivity(i3);

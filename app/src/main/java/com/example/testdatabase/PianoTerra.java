@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class PianoTerra extends AppCompatActivity {
 
     DatabaseHelper db;
-    EditText e1, e2, e3;
+
+    EditText e2, e3;
     Button b1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +21,10 @@ public class PianoTerra extends AppCompatActivity {
         setContentView(R.layout.activity_piano_terra);
         getSupportActionBar().setTitle("Piano Terra");
 
-        e1 = (EditText) findViewById(R.id.userpt);
+        final TextView mail = (TextView) findViewById(R.id.userpt);
+        Bundle bundlept = this.getIntent().getExtras();
+        mail.setText(bundlept.getString("email"));
+
         e2 = (EditText) findViewById(R.id.pianopt);
         e3 = (EditText) findViewById(R.id.tavolopt);
 
