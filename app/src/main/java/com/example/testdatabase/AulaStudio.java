@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class AulaStudio extends AppCompatActivity {
@@ -20,7 +21,9 @@ public class AulaStudio extends AppCompatActivity {
         setContentView(R.layout.activity_aula_studio);
         getSupportActionBar().setTitle("Aula Studio");
 
-        e1 = (EditText) findViewById(R.id.useras);
+        final TextView mail = (TextView) findViewById(R.id.useras);
+        Bundle bundleas = this.getIntent().getExtras();
+        mail.setText(bundleas.getString("email"));
         e2 = (EditText) findViewById(R.id.pianoas);
         e3 = (EditText) findViewById(R.id.tavoloas);
 

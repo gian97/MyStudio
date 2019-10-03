@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class PrimoPiano extends AppCompatActivity {
@@ -19,7 +20,9 @@ public class PrimoPiano extends AppCompatActivity {
         setContentView(R.layout.activity_primo_piano);
         getSupportActionBar().setTitle("Primo Piano");
 
-        e1 = (EditText) findViewById(R.id.userpp);
+        final TextView mail = (TextView) findViewById(R.id.userpp);
+        Bundle bundlepp = this.getIntent().getExtras();
+        mail.setText(bundlepp.getString("email"));
         e2 = (EditText) findViewById(R.id.pianopp);
         e3 = (EditText) findViewById(R.id.tavolopp);
 

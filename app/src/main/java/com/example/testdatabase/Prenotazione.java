@@ -44,8 +44,10 @@ public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuI
         switch (item.getItemId()) {
             case R.id.pp:
                 Bundle bundlepp = new Bundle();
+                bundlepp.putString("email", s1);
                 Toast.makeText(this, "Scelto primo piano", Toast.LENGTH_SHORT).show();
                 Intent i1 = new Intent(Prenotazione.this, PrimoPiano.class);
+                i1.putExtras(bundlepp);
                 startActivity(i1);
                 return true;
             case R.id.pt:
@@ -58,8 +60,10 @@ public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuI
                 return true;
             case R.id.as:
                 Bundle bundleas = new Bundle();
+                bundleas.putString("email", s1);
                 Toast.makeText(this, "Scelto aula studio", Toast.LENGTH_SHORT).show();
                 Intent i3 = new Intent(Prenotazione.this, AulaStudio.class);
+                i3.putExtras(bundleas);
                 startActivity(i3);
                 return true;
             default: return false;
