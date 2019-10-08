@@ -12,34 +12,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="292dp"
         android:layout_marginEnd="99dp"
+        android:background="@drawable/box"
         android:ems="10"
-        android:hint="Email"
-        android:background="#8BC34A"
+        android:hint="   Email"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="31dp"
+
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/box"
         android:ems="10"
-        android:hint="Password"
-        android:background="#8BC34A"
+        android:hint="   Password"
         android:inputType="textPersonName"
         android:password="true"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/button"
@@ -47,66 +46,67 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
         android:layout_marginEnd="161dp"
-        android:layout_marginBottom="268dp"
+        android:layout_marginBottom="264dp"
+        android:backgroundTint="#8BC34A"
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        android:backgroundTint="#8BC34A"
-        />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="291dp"
-        android:layout_height="219dp"
-        android:layout_marginBottom="29dp"
-        android:cropToPadding="false"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@mipmap/ic_launcher_foreground" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="252dp"
         android:layout_height="86dp"
         android:layout_marginStart="93dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="52dp"
         android:onClick="chiamoclick1"
         android:text="Non sei ancora registrato?\nRegistrati ora!"
         android:textColor="#F7050404"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="19dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="37dp"
+        android:id="@+id/imageView8"
+        android:layout_width="226dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:srcCompat="@mipmap/unimore" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="401dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ingmo" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="23dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="388dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editText"
         app:srcCompat="@mipmap/user" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="19dp"
+        android:layout_width="27dp"
         android:layout_height="35dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="18dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="357dp"
+        android:layout_marginBottom="348dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editText2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@mipmap/password" />
+        app:srcCompat="@drawable/password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
