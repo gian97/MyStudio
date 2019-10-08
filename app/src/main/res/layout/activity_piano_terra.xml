@@ -18,16 +18,18 @@
         app:layout_constraintVertical_bias="0.068"
         app:srcCompat="@mipmap/piano_terra" />
 
-    <EditText
+    <TextView
         android:id="@+id/userpt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:background="#8BC34A"
         android:hint="Email"
+        android:textColor="#0F0F0F"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="#8BC34A"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <EditText

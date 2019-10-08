@@ -15,13 +15,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/auletta" />
 
-    <EditText
+    <TextView
         android:id="@+id/useras"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="131dp"
         android:background="#8BC34A"
+        android:clickable="false"
         android:hint="Email"
+        android:textColor="#0E0000"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,9 +35,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:background="#8BC34A"
+        android:clickable="false"
         android:hint="Piano"
         android:text="Aula Studio"
-        android:background="#8BC34A"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
