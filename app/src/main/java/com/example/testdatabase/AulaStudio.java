@@ -33,8 +33,11 @@ public class AulaStudio extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                int num = Integer.parseInt(e3.getText().toString());
+                if(num >= 1 && num <= 5)
                 Toast.makeText(getApplicationContext(), "Prenotazione Aula Studio", Toast.LENGTH_SHORT).show();
-
+                else
+                    Toast.makeText(getApplicationContext(), "Numero tavolo sbagliato", Toast.LENGTH_SHORT).show();
             }
         });
 

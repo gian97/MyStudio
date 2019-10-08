@@ -33,7 +33,11 @@ public class PrimoPiano extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int num = Integer.parseInt(e3.getText().toString());
+                if(num >= 1 && num <= 11)
                 Toast.makeText(getApplicationContext(), "Prenotazione Primo Piano", Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(getApplicationContext(), "Numero tavolo sbagliato", Toast.LENGTH_SHORT).show();
 
             }
         });

@@ -29,13 +29,22 @@ public class PianoTerra extends AppCompatActivity {
         e2 = (EditText) findViewById(R.id.pianopt);
         e3 = (EditText) findViewById(R.id.tavolopt);
 
+
         b1 = (Button) findViewById(R.id.ppt);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                int num = Integer.parseInt(e3.getText().toString());
+                if(num >= 1 && num <= 9)
                 Toast.makeText(getApplicationContext(), "Prenotazione Piano Terra", Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(getApplicationContext(), "Numero tavolo sbagliato", Toast.LENGTH_SHORT).show();
             }
         });
     }
+
+
 }
