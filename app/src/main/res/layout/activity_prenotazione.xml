@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <EditText
         android:id="@+id/editText3"
         android:layout_width="342dp"
         android:layout_height="178dp"
@@ -43,9 +43,8 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:text="MyStudio!\nQuesta è l'app che ti permette di prenotare il tuo posto alla biblioteca Ingegneria Ferrari.\nTi basta un semplice click.\nFacile, veloce e a portata di mano."
-        android:textColor="#090000"
-        android:textSize="18dp"
+        android:text="MyStudio!\nQuesta è l'app che ti permette di prenotare il tuo posto alla biblioteca Ingegneria Ferrari.\n
+Ti basta un semplice click.\nFacile, veloce e a portata di mano."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
