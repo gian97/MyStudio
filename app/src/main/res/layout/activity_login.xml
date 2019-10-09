@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:foregroundTint="@android:color/background_light"
+    android:background="#C6E6A8"
     tools:context=".Login">
 
     <EditText
@@ -64,18 +64,18 @@
         android:text="Non sei ancora registrato?\nRegistrati ora!"
         android:textColor="#F7050404"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="226dp"
-        android:layout_height="182dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="63dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginBottom="39dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
         app:srcCompat="@mipmap/unimore" />
 
     <ImageView
@@ -107,6 +107,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editText2"
         app:srcCompat="@drawable/password" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="529dp"
+        android:layout_height="228dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:srcCompat="@mipmap/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
