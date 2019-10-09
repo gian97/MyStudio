@@ -9,8 +9,11 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
@@ -21,6 +24,20 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
+
+        ImageView internet = findViewById(R.id.unimore);
+        internet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(Login.this, Sito.class);
+                startActivity(i);
+            }
+        });
+
+        getSupportActionBar().setTitle("Login");
         db = new DatabaseHelper(this);
       final EditText  e1 = (EditText) findViewById(R.id.editText);
         final EditText e2 = (EditText) findViewById(R.id.editText2);

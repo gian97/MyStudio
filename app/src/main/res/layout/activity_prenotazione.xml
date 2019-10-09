@@ -4,49 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C6E6A8"
     tools:context=".Prenotazione">
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="564dp"
         android:backgroundTint="#8BC34A"
         android:onClick="showPrenotazione"
         android:text="Visualizza le tue prenotazioni attive"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="376dp"
+        android:backgroundTint="#8BC34A"
         android:onClick="showPopup"
         android:text="In quale piano vuoi prenotare il tuo posto?"
-        android:backgroundTint="#8BC34A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/editText3"
-        android:layout_width="342dp"
-        android:layout_height="178dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="44dp"
-        android:background="@color/colorPrimary"
-        android:backgroundTint="#8BC34A"
-        android:ems="10"
-        android:fontFamily="serif-monospace"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:text="MyStudio!\nQuesta è l'app che ti permette di prenotare il tuo posto alla biblioteca Ingegneria Ferrari.\nTi basta un semplice click.\nFacile, veloce e a portata di mano."
-        android:textColor="#090808"
-        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,8 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="95dp"
-        android:text="Benvenuto,  "
         android:backgroundTint="#8BC34A"
+        android:text="Benvenuto,  "
         android:textColor="#0E0000"
         android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
@@ -69,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="95dp"
         android:textColor="#050000"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintStart_toEndOf="@+id/textView" />
 
@@ -81,6 +64,19 @@
         android:layout_marginTop="35dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="465dp"
+        android:layout_height="212dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/presentazione" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

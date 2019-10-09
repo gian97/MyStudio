@@ -2,14 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.testdatabase">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Cronologia"></activity>
+        <activity android:name=".Sito"></activity>
+        <activity android:name=".Cronologia" />
         <activity android:name=".Prenotazione" />
         <activity android:name=".AulaStudio" />
         <activity android:name=".PrimoPiano" />
