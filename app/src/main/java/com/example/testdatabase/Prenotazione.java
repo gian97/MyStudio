@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
     String s1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +23,7 @@ public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuI
         Bundle bundle = this.getIntent().getExtras();
         mail.setText(bundle.getString("email"));
         getSupportActionBar().setTitle("Home");
+
 
         final TextView nome = (TextView) findViewById(R.id.textView3);
         s1 = mail.getText().toString();
@@ -35,7 +38,10 @@ public class Prenotazione extends AppCompatActivity implements PopupMenu.OnMenuI
     }
 
     public void showPrenotazione(View v){
+        Bundle bundlex = new Bundle();
+        bundlex.putString("email", s1);
         Intent ac = new Intent(this, Cronologia.class);
+        ac.putExtras(bundlex);
         startActivity(ac);
     }
 
