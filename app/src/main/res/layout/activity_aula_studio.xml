@@ -18,45 +18,45 @@
 
     <TextView
         android:id="@+id/useras"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="131dp"
-        android:background="#8BC34A"
+        android:background="@drawable/box"
         android:clickable="false"
         android:hint="Email"
         android:textColor="#0E0000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/pianoas"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="#8BC34A"
+        android:background="@drawable/box"
         android:clickable="false"
         android:hint="Piano"
         android:singleLine="true"
         android:text="Aula Studio"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/useras" />
 
     <EditText
         android:id="@+id/tavoloas"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="#8BC34A"
+        android:background="@drawable/box"
         android:hint="Numero Tavolo"
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pianoas" />
 
@@ -64,9 +64,9 @@
         android:id="@+id/pas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#8BC34A"
         android:layout_marginStart="161dp"
         android:layout_marginBottom="46dp"
+        android:background="#8BC34A"
         android:text="prenota"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
