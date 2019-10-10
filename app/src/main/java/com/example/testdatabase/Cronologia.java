@@ -18,7 +18,7 @@ public class Cronologia extends AppCompatActivity {
     DatabaseHelper db;
     Button b1;
     String s1;
-    ListView l1;
+
 
 
 
@@ -30,7 +30,7 @@ public class Cronologia extends AppCompatActivity {
         getSupportActionBar().setTitle("Cronologia Prenotazioni");
 
 
-        l1 = (ListView)findViewById(R.id.listView);
+
         db = new DatabaseHelper(this);
 
 
