@@ -64,12 +64,23 @@
         android:id="@+id/ppp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="36dp"
         android:background="#8BC34A"
         android:text="prenota"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.309"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tavolopp" />
+
+    <Button
+        android:id="@+id/visualizza_pp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="36dp"
+        android:background="#8BC34A"
+        android:text="visualizza"
+        app:layout_constraintStart_toEndOf="@+id/ppp"
         app:layout_constraintTop_toBottomOf="@+id/tavolopp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

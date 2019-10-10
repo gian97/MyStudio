@@ -64,11 +64,22 @@
         android:id="@+id/pas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginBottom="46dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginBottom="44dp"
         android:background="#8BC34A"
         android:text="prenota"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/visualizza_as"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="44dp"
+        android:text="Visualizza"
+        android:background="#8BC34A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

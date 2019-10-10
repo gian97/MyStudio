@@ -1,7 +1,9 @@
 package com.example.testdatabase;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +16,7 @@ public class PrimoPiano extends AppCompatActivity {
     DatabaseHelper db;
     EditText e2, e3;
     Button b1;
+    Button bview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,7 @@ public class PrimoPiano extends AppCompatActivity {
         e3 = (EditText) findViewById(R.id.tavolopp);
 
         b1 = (Button) findViewById(R.id.ppp);
+        bview = (Button)findViewById(R.id.visualizza_pp);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +58,40 @@ public class PrimoPiano extends AppCompatActivity {
                 }
             }
         });
+
+        String s2 = mail.getText().toString();
+        viewAll(s2);
+
+    }
+
+    public void viewAll(final String email){
+        bview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Cursor res = db.getAllData();
+                if(res.getCount() == 0){
+                    Toast.makeText(getApplicationContext(), "Nessuna prenotazione esistente", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                StringBuffer buffer = new StringBuffer();
+                while(res.moveToNext()){
+                    String c = res.getString(0);
+                    if(c.equals(email)){
+                        buffer.append("\nPiano:  " + res.getString(1));
+                        buffer.append("\n\n\nTavolo numero:  " + res.getString(2)+"\n\n");
+                    }
+                }
+                showMessage("La tua prenotazione attiva",buffer.toString());
+            }
+        });
+    }
+
+    public void showMessage(String title, String Message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Message);
+        builder.show();
 
     }
 }

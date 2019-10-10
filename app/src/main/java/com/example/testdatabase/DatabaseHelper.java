@@ -5,8 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.ArrayAdapter;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(@Nullable Context context) {
@@ -94,7 +97,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return db.delete("prenotazioni",null, null);
     }
 
-
     //checking if the user is already done
     public Boolean emailpassword(String email, String password){
         SQLiteDatabase db = this.getReadableDatabase();
@@ -102,4 +104,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if(cursor.getCount()>0) return true;
         else return false;
     }
+
+
+    public Cursor getAllData(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from prenotazioni", null);
+        return cursor;
+    }
+
 }

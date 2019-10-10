@@ -2,16 +2,26 @@ package com.example.testdatabase;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class Cronologia extends AppCompatActivity {
 
     DatabaseHelper db;
     Button b1;
+    String s1;
+    ListView l1;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +29,20 @@ public class Cronologia extends AppCompatActivity {
         setContentView(R.layout.activity_cronologia);
         getSupportActionBar().setTitle("Cronologia Prenotazioni");
 
+
+        l1 = (ListView)findViewById(R.id.listView);
+        db = new DatabaseHelper(this);
+
+
+
+
+
         final TextView mail = (TextView) findViewById(R.id.userpren);
         Bundle bundlex = this.getIntent().getExtras();
         mail.setText(bundlex.getString("email"));
+
+
+
 
 
         db = new DatabaseHelper(this);
@@ -29,7 +50,7 @@ public class Cronologia extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String s1 = mail.getText().toString();
+                s1 = mail.getText().toString();
 
                 if (s1.equals("admin1@studenti.unimore.it")) {
                     Integer y = db.deleteall();
@@ -48,5 +69,11 @@ public class Cronologia extends AppCompatActivity {
                 }
             }
         });
+
+
     }
+
+
+
+
 }
