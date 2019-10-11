@@ -18,6 +18,7 @@ public class AulaStudio extends AppCompatActivity {
     EditText e1, e2, e3;
     Button b1;
     Button bview;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +35,8 @@ public class AulaStudio extends AppCompatActivity {
 
         b1 = (Button) findViewById(R.id.pas);
         bview = (Button)findViewById(R.id.visualizza_as);
+
+
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +82,7 @@ public class AulaStudio extends AppCompatActivity {
                     String c = res.getString(0);
                     if(c.equals(email)){
                         buffer.append("\nPiano:  " + res.getString(1));
-                        buffer.append("\n\n\nTavolo numero:  " + res.getString(2)+"\n\n");
+                        buffer.append("\n\n\nTavolo numero:   " + res.getString(2)+"\n\n");
                     }
                 }
                 showMessage("La tua prenotazione attiva",buffer.toString());
@@ -87,12 +90,12 @@ public class AulaStudio extends AppCompatActivity {
         });
     }
 
-    public void showMessage(String title, String Message){
+    public void showMessage(String title, String Message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
         builder.setTitle(title);
         builder.setMessage(Message);
         builder.show();
-
     }
+
 }

@@ -20,7 +20,7 @@
         android:id="@+id/useras"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="131dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/box"
         android:clickable="false"
         android:hint="Email"
@@ -64,8 +64,8 @@
         android:id="@+id/pas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="92dp"
         android:background="#8BC34A"
         android:text="prenota"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,11 +75,11 @@
         android:id="@+id/visualizza_as"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="44dp"
-        android:text="Visualizza"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="92dp"
         android:background="#8BC34A"
+        android:text="Visualizza"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pas" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
