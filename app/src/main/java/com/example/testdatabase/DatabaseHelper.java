@@ -113,4 +113,48 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public Integer getAllSeattotPP(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String a = "Primo piano";
+        Cursor cursor = db.rawQuery("select * from prenotazioni where aula=?", new String[]{a});
+        return cursor.getCount();
+    }
+
+    public Integer getAllSeattotPT(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String a = "Piano Terra";
+        Cursor cursor = db.rawQuery("select * from prenotazioni where aula=?", new String[]{a});
+        return cursor.getCount();
+    }
+
+    public Integer getAllSeattotAS(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String a = "Aula Studio";
+        Cursor cursor = db.rawQuery("select * from prenotazioni where aula=?", new String[]{a});
+        return cursor.getCount();
+    }
+
+    public Integer getAllSeatPp(String b){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String a = "Primo piano";
+        Cursor cursor = db.rawQuery("select * from prenotazioni where aula=? and numtavolo=?", new String[]{a, b});
+        return cursor.getCount();
+    }
+
+    public Integer getAllSeatPt(String b){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String a = "Piano Terra";
+        Cursor cursor = db.rawQuery("select * from prenotazioni where aula=? and numtavolo=?", new String[]{a, b});
+        return cursor.getCount();
+    }
+
+    public Integer getAllSeatAs(String b){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String a = "Aula Studio";
+        Cursor cursor = db.rawQuery("select * from prenotazioni where aula=? and numtavolo=?", new String[]{a, b});
+        return cursor.getCount();
+    }
+
+
+
 }
