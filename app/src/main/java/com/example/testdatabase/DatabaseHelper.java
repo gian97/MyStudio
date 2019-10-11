@@ -79,6 +79,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return true;
     }
 
+
     //checking if email exists
     public Boolean chkemail(String email){
         SQLiteDatabase db = this.getWritableDatabase();

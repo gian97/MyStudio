@@ -17,6 +17,9 @@ public class PrimoPiano extends AppCompatActivity {
     EditText e2, e3;
     Button b1;
     Button bview;
+    Button bcanc;
+    String s1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,32 @@ public class PrimoPiano extends AppCompatActivity {
 
         b1 = (Button) findViewById(R.id.ppp);
         bview = (Button)findViewById(R.id.visualizza_pp);
+
+        bcanc =(Button) findViewById(R.id.cancella_pp);
+        bcanc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                s1 = mail.getText().toString();
+
+                if (s1.equals("admin1@studenti.unimore.it")) {
+                    Integer y = db.deleteall();
+                    Toast.makeText(getApplicationContext(), "Sei admin, stai cancellando tutto", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Boolean controllo = db.chkprem(s1);
+                    if(controllo == true){
+                        Toast.makeText(getApplicationContext(), "Non hai ancora prenotato nulla", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Integer x = db.deletedata(s1);
+                        if (x == 1)
+                            Toast.makeText(getApplicationContext(), "Cancellata la prenotazione", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
+
+
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +110,12 @@ public class PrimoPiano extends AppCompatActivity {
                         buffer.append("\n\n\nTavolo numero:  " + res.getString(2)+"\n\n");
                     }
                 }
+                Boolean controllo = db.chkprem(email);
+                if(controllo == true){
+                    buffer.append("Non hai ancora effettuato una prenotazione");
+                }
+
+
                 showMessage("La tua prenotazione attiva",buffer.toString());
             }
         });

@@ -115,6 +115,11 @@ public class PianoTerra extends AppCompatActivity {
                         buffer.append("\n\n\nTavolo numero:   " + res.getString(2)+"\n\n");
                     }
                 }
+
+                Boolean controllo = db.chkprem(email);
+                if(controllo == true){
+                    buffer.append("Non hai ancora effettuato una prenotazione");
+                }
                 showMessage("La tua prenotazione attiva",buffer.toString());
             }
         });
