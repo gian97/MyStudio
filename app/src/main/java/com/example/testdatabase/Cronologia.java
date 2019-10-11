@@ -75,7 +75,6 @@ public class Cronologia extends AppCompatActivity {
         bpt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String[] numbers = new String[10];
                 StringBuffer buffer = new StringBuffer();
 
