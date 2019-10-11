@@ -8,25 +8,38 @@
     tools:context=".Cronologia">
 
     <Button
-        android:id="@+id/cancella"
+        android:id="@+id/pt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="516dp"
-        android:text="Cancella"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/userpren"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="604dp"
+        android:text="piano terra"
+        app:layout_constraintBottom_toTopOf="@+id/pp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:background="@drawable/buttonshape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/pp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="primo piano"
+        app:layout_constraintBottom_toTopOf="@+id/as"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/buttonshape"
+        app:layout_constraintTop_toBottomOf="@+id/pt" />
 
+    <Button
+        android:id="@+id/as"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:text="aula studio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
