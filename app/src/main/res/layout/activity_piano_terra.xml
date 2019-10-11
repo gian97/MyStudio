@@ -42,6 +42,8 @@
         android:hint="Piano"
         android:singleLine="true"
         android:text="@string/piano_terra"
+        android:longClickable="false"
+        android:clickable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

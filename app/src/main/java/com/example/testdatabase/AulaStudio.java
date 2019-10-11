@@ -81,7 +81,7 @@ public class AulaStudio extends AppCompatActivity {
                     Boolean num = isNumeric(s3);
                     if(num == true){
                         int foo = Integer.parseInt(s3);
-                        if(foo >= 1 && foo <= 9){
+                        if(foo >= 1 && foo <= 5){
                             Boolean controllo = db.chkprem(s1);
                             if (controllo == true) {
                                 Boolean prova = db.prenote(s1, s2, s3);
