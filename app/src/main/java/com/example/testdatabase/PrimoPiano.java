@@ -73,16 +73,29 @@ public class PrimoPiano extends AppCompatActivity {
                 String s2 = e2.getText().toString();
                 String s3 = e3.getText().toString();
 
+
                 if (s1.equals("") || s2.equals("") || s3.equals("")) {
                     Toast.makeText(getApplicationContext(), "Dati non inseriti", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Boolean controllo = db.chkprem(s1);
-                    if (controllo == true) {
-                        Boolean prova = db.prenote(s1, s2, s3);
-                        Toast.makeText(getApplicationContext(), "Prenotazione avvenuta", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Hai già eseguito una prenotazione", Toast.LENGTH_SHORT).show();
+                    Boolean num = isNumeric(s3);
+                    if(num == true){
+                        int foo = Integer.parseInt(s3);
+                        if(foo >= 1 && foo <= 9){
+                            Boolean controllo = db.chkprem(s1);
+                            if (controllo == true) {
+                                Boolean prova = db.prenote(s1, s2, s3);
+                                Toast.makeText(getApplicationContext(), "Prenotazione avvenuta", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(getApplicationContext(), "Hai già eseguito una prenotazione", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(), "Non hai messo un numero del tavolo valido", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), "Non hai messo un numero", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -128,5 +141,14 @@ public class PrimoPiano extends AppCompatActivity {
         builder.setMessage(Message);
         builder.show();
 
+    }
+
+    public static boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch(NumberFormatException e){
+            return false;
+        }
     }
 }
