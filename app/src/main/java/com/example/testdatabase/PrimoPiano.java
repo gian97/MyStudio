@@ -82,13 +82,19 @@ public class PrimoPiano extends AppCompatActivity {
                     if(num == true){
                         int foo = Integer.parseInt(s3);
                         if(foo >= 1 && foo <= 13){
-                            Boolean controllo = db.chkprem(s1);
-                            if (controllo == true) {
-                                Boolean prova = db.prenote(s1, s2, s3);
-                                Toast.makeText(getApplicationContext(), "Prenotazione avvenuta", Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(getApplicationContext(), "Hai già eseguito una prenotazione", Toast.LENGTH_SHORT).show();
+                            int posti = db.NoMore(s2, s3); //ritorna quante prenotazioni
+                            if(posti < 8){
+                                Boolean controllo = db.chkprem(s1);
+                                if (controllo == true) {
+                                    Boolean prova = db.prenote(s1, s2, s3);
+                                    Toast.makeText(getApplicationContext(), "Prenotazione avvenuta", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(getApplicationContext(), "Hai già eseguito una prenotazione", Toast.LENGTH_SHORT).show();
+                                }
+                            }else{
+                                Toast.makeText(getApplicationContext(), "Tavolo totalmente occupato", Toast.LENGTH_SHORT).show();
                             }
+
                         }
                         else{
                             Toast.makeText(getApplicationContext(), "Non hai messo un numero del tavolo valido", Toast.LENGTH_SHORT).show();
@@ -99,6 +105,7 @@ public class PrimoPiano extends AppCompatActivity {
                     }
                 }
             }
+
         });
 
         String s2 = mail.getText().toString();

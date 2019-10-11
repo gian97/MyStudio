@@ -134,6 +134,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor.getCount();
     }
 
+    public Integer NoMore(String a, String b){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from prenotazioni where aula=? and numtavolo=?", new String[]{a, b});
+        return cursor.getCount();
+    }
+
     public Integer getAllSeatPp(String b){
         SQLiteDatabase db = this.getReadableDatabase();
         String a = "Primo piano";
