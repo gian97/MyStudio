@@ -20,6 +20,8 @@ public class AulaStudio extends AppCompatActivity {
     Button bview;
     Button bcanc;
     String s1;
+    String nome;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,11 +124,22 @@ public class AulaStudio extends AppCompatActivity {
                     return;
                 }
                 StringBuffer buffer = new StringBuffer();
+                if(email.equals("admin1@studenti.unimore.it")){
+                    while(res.moveToNext()){
+                        String c = res.getString(0);
+                            buffer.append("Email:   " + res.getString(0));
+                            buffer.append("\nPiano:  " + res.getString(1));
+                            buffer.append("\nTavolo numero:   " + res.getString(2)+"\n\n");
+
+                    }
+                }
+                else{
                 while(res.moveToNext()){
                     String c = res.getString(0);
                     if(c.equals(email)){
                         buffer.append("\nPiano:  " + res.getString(1));
                         buffer.append("\n\n\nTavolo numero:   " + res.getString(2)+"\n\n");
+                        }
                     }
                 }
 
