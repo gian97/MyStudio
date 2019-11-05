@@ -54,6 +54,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //checking if it si an email (@)
     public boolean chiocc(String email){
+        if(email.equals("admin1@studenti.unimore.it")){
+            return true;
+        }
+
         String sotto = "******@studenti.unimore.it";
         boolean trovato = false;
         int m = sotto.length();
@@ -75,15 +79,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public Boolean chkprem(String email){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("Select * from prenotazioni where email=?", new String[]{email});
+
         if(cursor.getCount()>0) return false;
         else return true;
     }
+
 
 
     //checking if email exists
     public Boolean chkemail(String email){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{email});
+
         if(cursor.getCount()>0) return false;
         else return true;
     }

@@ -37,6 +37,8 @@ public class AulaStudio extends AppCompatActivity {
         e2 = (EditText) findViewById(R.id.pianoas);
         e3 = (EditText) findViewById(R.id.tavoloas);
 
+        e2.setEnabled(false);
+
         b1 = (Button) findViewById(R.id.pas);
         bview = (Button)findViewById(R.id.visualizza_as);
 
@@ -78,6 +80,7 @@ public class AulaStudio extends AppCompatActivity {
 
                 if (s1.equals("") || s2.equals("") || s3.equals("")) {
                     Toast.makeText(getApplicationContext(), "Dati non inseriti", Toast.LENGTH_SHORT).show();
+
                 }
                 else {
                     Boolean num = isNumeric(s3);
@@ -126,7 +129,6 @@ public class AulaStudio extends AppCompatActivity {
                 StringBuffer buffer = new StringBuffer();
                 if(email.equals("admin1@studenti.unimore.it")){
                     while(res.moveToNext()){
-                        String c = res.getString(0);
                             buffer.append("Email:   " + res.getString(0));
                             buffer.append("\nPiano:  " + res.getString(1));
                             buffer.append("\nTavolo numero:   " + res.getString(2)+"\n\n");

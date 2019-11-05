@@ -38,6 +38,8 @@ public class PianoTerra extends AppCompatActivity {
         e2 = (EditText) findViewById(R.id.pianopt);
         e3 = (EditText) findViewById(R.id.tavolopt);
 
+        e2.setEnabled(false);
+
 
         b1 = (Button) findViewById(R.id.ppt);
         bview = (Button)findViewById(R.id.visualizza);

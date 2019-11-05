@@ -35,6 +35,8 @@ public class PrimoPiano extends AppCompatActivity {
         e2 = (EditText) findViewById(R.id.pianopp);
         e3 = (EditText) findViewById(R.id.tavolopp);
 
+        e2.setEnabled(false);
+
         b1 = (Button) findViewById(R.id.ppp);
         bview = (Button)findViewById(R.id.visualizza_pp);
 
